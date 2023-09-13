@@ -23,7 +23,7 @@ void loop() {
         delay(500);
 
         if (digitalRead(powerButton) == HIGH) {
-            // 1 if data was sent, 0 otherwise
+            // 1 if data was sent, 0 otherwise (protocol, address, command, times to send)
             dataSent = IrSender.write(RC5, 0, 12, 1);
             Serial.print(dataSent);
         }
