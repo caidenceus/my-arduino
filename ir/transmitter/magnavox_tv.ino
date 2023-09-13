@@ -1,6 +1,7 @@
 #include <IRremote.h>
 
-const int powerButton = 2;
+// This value being the same as the value sent in the IR write function is a coincidence
+const int powerButton = 12;
 
 
 void setup() {
