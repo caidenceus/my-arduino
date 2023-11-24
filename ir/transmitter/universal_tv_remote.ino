@@ -37,27 +37,37 @@ void loop() {
         if (digitalRead(powerButton) == HIGH) {
             timer = 0;
             delay(50);
-            IrSender.write(RC5, 0, 12, 1);
+            // IrSender.write(RC5, 0, 12, 1);
+            // IrSender.write(SONY, 1, 21, 1);
+            IrSender.write(NEC, 4, 8, 1);
         }
         if (digitalRead(volumeUpButton) == HIGH) {
             timer = 0;
             delay(50);
-            IrSender.write(RC5, 0, 16, 1);
+            // IrSender.write(RC5, 0, 16, 1);
+            // IrSender.write(SONY, 1, 18, 1);
+            IrSender.write(NEC, 4, 2, 1);
         }
         if (digitalRead(volumeDownButton) == HIGH) {
             timer = 0;
             delay(50);
-            IrSender.write(RC5, 0, 17, 1);
+            // IrSender.write(RC5, 0, 17, 1);
+            // IrSender.write(SONY, 1, 19, 1);
+            IrSender.write(NEC, 4, 3, 1);
         }
         if (digitalRead(channelUpButton) == HIGH) {
             timer = 0;
             delay(50);
-            IrSender.write(RC5, 0, 32, 1);
+            // IrSender.write(RC5, 0, 32, 1);
+            // IrSender.write(SONY, 1, 16, 1);
+            IrSender.write(NEC, 4, 0, 1);
         }
         if (digitalRead(channelDownButton) == HIGH) {
             timer = 0;
             delay(50);
-            IrSender.write(RC5, 0, 33, 1);
+            // IrSender.write(RC5, 0, 33, 1);
+            // IrSender.write(SONY, 1, 17, 1);
+            IrSender.write(NEC, 4, 1, 1);
         }
         delay(1);
         timer += 1;
